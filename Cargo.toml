@@ -13,3 +13,12 @@ futures = "0.3"
 serde_json = "1.0"
 structopt = "0.3.25"
 tokio = { version = "1.13" }
+prost = "0.9"
+influxdb_iox_client = { git = "https://github.com/influxdata/influxdb_iox.git", rev="37c65fc24f2170a8a187cd62d66f1122c0b7b099", features = ["flight"] }
+generated_types = { git = "https://github.com/influxdata/influxdb_iox.git", rev="37c65fc24f2170a8a187cd62d66f1122c0b7b099" }
+
+
+# Not sure why, but these are required to get cargo to be happy with
+# dependencies for some reason due to 'workspace-hack'
+rand = "=0.8.4"
+sqlx-core = "=0.5.10"

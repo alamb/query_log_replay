@@ -65,7 +65,7 @@ async fn main() {
     println!("InfluxDB IOx Query Replay Tool... online");
 
     println!("Connecting to {}", config.host);
-    let connection = influxdb_iox_client::connection::Builder::new()
+    let connection = influxdb_iox_client::connection::Builder::default()
         .build(&config.host)
         .await
         .expect("Can not connect");

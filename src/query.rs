@@ -8,9 +8,9 @@ use futures::stream::TryStreamExt;
 use generated_types::influxdata::platform::storage::{
     storage_client::StorageClient, ReadFilterRequest,
 };
-use generated_types::prost::Message;
 use generated_types::ReadSource;
 use influxdb_iox_client::connection::Connection;
+use prost::Message;
 
 pub type Result<T, E = String> = std::result::Result<T, E>;
 
